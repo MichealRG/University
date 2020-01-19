@@ -41,6 +41,7 @@ namespace Zzadanie2
             stud5.SetNumberOfGroup(groupe1);
             stud6.SetNumberOfGroup(groupe2);
             //Oceny
+            
 
             stud1.AddGrades(sub1, getRandomGrade());
             stud1.AddGrades(sub2, getRandomGrade());
@@ -65,7 +66,12 @@ namespace Zzadanie2
             stud6.AddGrades(sub1, getRandomGrade());
             stud6.AddGrades(sub2, getRandomGrade());
             stud6.AddGrades(sub3, getRandomGrade());
-
+            Console.WriteLine(stud1.GetNumberOfGroup());
+            Console.WriteLine(stud2.GetNumberOfGroup());
+            Console.WriteLine(stud3.GetNumberOfGroup());
+            Console.WriteLine(stud4.GetNumberOfGroup());
+            Console.WriteLine(stud5.GetNumberOfGroup());
+            Console.WriteLine(stud6.GetNumberOfGroup());
         }
         public static BitArray getRandomGrade()
         {

@@ -7,7 +7,7 @@ namespace Zzadanie2
 {
     class Grades
     {
-        public Dictionary<string,BitArray> SubGrades { get; set; }
+        public Dictionary<string, BitArray> SubGrades { get; set; } 
         public Grades()
         {
             SubGrades = new Dictionary<string, BitArray>();

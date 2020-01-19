@@ -11,8 +11,8 @@ namespace Zzadanie2
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
-        public Grades Grade { get; set; }
-        public Groupe Group { get; set; }
+        public Grades Grade { get; set; } = new Grades();
+        public Groupe Group { get; set; }  
         public Student(string firstName, string lastName, int age)
         {
             Age = age;
@@ -27,10 +27,7 @@ namespace Zzadanie2
         {
             return Group.Number;
         }
-        public void SetGrade(Grades grade)
-        {
-            Grade = grade;
-        }
+
         public BitArray GetGradeFromSubject (string name)
         {
             return Grade.SubGrades[name];
