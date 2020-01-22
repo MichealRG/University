@@ -5,7 +5,7 @@ using System.Collections;
 
 namespace Zzadanie2
 {
-    class Student
+    class Student:IDisplayingInfo
     {
 
         public string FirstName { get; set; }
@@ -19,7 +19,7 @@ namespace Zzadanie2
             FirstName = firstName;
             LastName = lastName;
         }
-        public void SetNumberOfGroup(Groupe group)
+        public void SetGroup(Groupe group)
         {
             Group = group;
         }
@@ -32,9 +32,9 @@ namespace Zzadanie2
         {
             return Grade.SubGrades[name];
         }
-        public (string, string, int) GetDefaultInfo ()
+        public (string, string, string) GetDefaultInfo ()
         {
-            return (FirstName, LastName, Age);
+            return (FirstName, LastName, Age.ToString());
         }
         public void AddGrades(Subject subject, BitArray pass)
         {

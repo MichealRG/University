@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Zzadanie2
 {
-    class Teacher
+    class Teacher:IDisplayingInfo
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
