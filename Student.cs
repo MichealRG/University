@@ -5,21 +5,21 @@ using System.Collections;
 
 namespace Zzadanie2
 {
-    class Student
+    class Student:IDisplayingInfo
     {
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
-        public Grades Grade { get; set; }
-        public Groupe Group { get; set; }
+        public Grades Grade { get; set; } = new Grades();
+        public Groupe Group { get; set; }  
         public Student(string firstName, string lastName, int age)
         {
             Age = age;
             FirstName = firstName;
             LastName = lastName;
         }
-        public void SetNumberOfGroup(Groupe group)
+        public void SetGroup(Groupe group)
         {
             Group = group;
         }
@@ -27,17 +27,14 @@ namespace Zzadanie2
         {
             return Group.Number;
         }
-        public void SetGrade(Grades grade)
-        {
-            Grade = grade;
-        }
+
         public BitArray GetGradeFromSubject (string name)
         {
             return Grade.SubGrades[name];
         }
-        public (string, string, int) GetDefaultInfo ()
+        public (string, string, string) GetDefaultInfo ()
         {
-            return (FirstName, LastName, Age);
+            return (FirstName, LastName, Age.ToString());
         }
         public void AddGrades(Subject subject, BitArray pass)
         {

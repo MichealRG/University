@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Zzadanie2
 {
-    class Teacher
+    class Teacher:IDisplayingInfo
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Title { get; set; }
-        public List<Subject> LeadingSubject { get; set; }
+        public List<Subject> LeadingSubject { get; set; } = new List<Subject>();
         public Teacher(string fName, string lName, string title)
         {
             FirstName = fName;
